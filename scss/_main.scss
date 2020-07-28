@@ -1,0 +1,234 @@
+
+html{
+    padding: 0;
+    margin: 0;
+}
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+p{
+  font-family: $font1;
+}
+
+body{
+  background-color: $primary;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: $font1;
+  -ms-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+
+
+  #nav-wrapper{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: $font1;
+    color: #111;
+    font-size: 1em;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 30px 60px;
+
+    .nav-container{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding: 5px;
+
+      ul{
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+
+        animation-duration: 0.5s;
+        li{
+          display: inline;
+          text-align: center;
+          border-bottom: 2px solid transparent;
+          margin: 0 15px;
+
+          @include transition;
+          &:hover, &:focus{
+            border-bottom: 2px solid $primary;
+
+          }
+
+          a{
+            color: #fff;
+            text-decoration: none;
+            // text-transform: uppercase;
+
+            @include transition;
+
+            &:hover{
+              opacity: .8;
+            }
+          }
+        }
+
+      } // ul
+
+      .nav-logo{
+        display: flex;
+        align-items: center;
+        color: #fff;
+        width: 100px;
+
+        .logo{
+          width: 320px;
+        }
+      }
+
+    } // nav-container
+
+    @media (min-width: 790px) {
+      .hamburger {
+        display: none;
+      }
+    }
+
+  } // nav-wrapper
+
+  @media (min-width: 790px) {
+    #menu.animated {
+      -ms-animation: none;
+      -moz-animation: none;
+      -webkit-animation: none;
+      animation: none;
+    }
+  }
+
+  @media (max-width: 789px) {
+    #nav-wrapper {
+      padding: 0;
+      .nav-container {
+        position: relative;
+        padding: 20px;
+        ul {
+          padding: 0 !important;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-left: 40px;
+          position: fixed;
+          background-color: $dark;
+          height: 100vh;
+          width: 100vw;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          display: none;
+          // top: -400px;
+
+          li {
+            margin: 20px 0;
+          }
+
+          .login-button {
+            margin: 20px 0;
+          }
+
+          &.slideInDown {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+
+  .countdown {
+      padding: 50px 30px;
+      background: #fff;
+      color: $dark;
+      text-align: center;
+      
+      .clock {
+          ul {
+              justify-content: center;
+              flex-wrap: wrap;
+              padding: 0;
+              li {
+                list-style: none;
+                background: $primary;
+                color: #fff;
+                padding: 30px 20px;
+                margin: 10px;
+                justify-content: center;
+                font-size: 30px;
+              }
+          }
+      }
+
+      h1, h3,h2 {
+          font-size: 28px;
+          text-transform: uppercase;
+      }
+
+      .cards {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          .card {
+              line-height: 0.9;
+              width: 100%;
+              max-width: 439px;
+              background: $primary;
+              padding: 20px 50px;
+              margin: 10px 20px;
+              display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+              h1,h2,h3,p {
+                  margin: 5px;
+              }
+
+              &.left-card {
+                  line-height: 1.2;
+              }
+          }
+          
+      }
+  }//countdown
+
+  @media screen and (max-width:630px) {
+      .countdown {
+        .clock {
+            ul {
+                li {
+                    font-size: 20px;
+                }
+            }
+        }
+      }
+  }
+  @media screen and (max-width:430px) {
+    #nav-wrapper {
+        .nav-container {
+            .nav-logo {
+                .logo {
+                    width: 220px;
+                }
+            }
+        } 
+    }
+    h1 {
+        font-size: 26px;
+    }
+    
+  }
+
+
+} //body
+/*# sourceMappingURL=style.scss.map */
