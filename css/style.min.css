@@ -305,6 +305,7 @@ a.link {
 #faq .faq-info ul .inner .question h3 {
   margin: 0.4em 0;
   font-size: 1em;
+  color: #fff;
 }
 
 #faq .faq-info ul .inner .question p {
@@ -714,14 +715,66 @@ body #nav-wrapper .nav-container .nav-logo .logo {
   }
 }
 
-body .countdown {
+body .countdown-info {
   padding: 50px 30px;
   background: #fff;
   color: #081622;
   text-align: center;
 }
 
-body .countdown .clock ul {
+body .countdown-info #countdown-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+body .countdown-info #countdown-container .countdown {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+body .countdown-info #countdown-container .countdown .countdown-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+body .countdown-info #countdown-container .countdown .countdown-item .countdown-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+  font-size: 35px;
+  padding: 20px;
+}
+
+body .countdown-info ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -730,7 +783,7 @@ body .countdown .clock ul {
   padding: 0;
 }
 
-body .countdown .clock ul li {
+body .countdown-info ul li {
   list-style: none;
   background: #276BA5;
   color: #fff;
@@ -742,12 +795,12 @@ body .countdown .clock ul li {
   font-size: 30px;
 }
 
-body .countdown h1, body .countdown h3, body .countdown h2 {
+body .countdown-info h1, body .countdown-info h3, body .countdown-info h2 {
   font-size: 28px;
   text-transform: uppercase;
 }
 
-body .countdown .cards {
+body .countdown-info .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -758,7 +811,7 @@ body .countdown .cards {
       flex-wrap: wrap;
 }
 
-body .countdown .cards .card {
+body .countdown-info .cards .card {
   line-height: 0.9;
   width: 100%;
   max-width: 439px;
@@ -780,17 +833,17 @@ body .countdown .cards .card {
           justify-content: center;
 }
 
-body .countdown .cards .card h1, body .countdown .cards .card h2, body .countdown .cards .card h3, body .countdown .cards .card p {
+body .countdown-info .cards .card h1, body .countdown-info .cards .card h2, body .countdown-info .cards .card h3, body .countdown-info .cards .card p {
   margin: 5px;
 }
 
-body .countdown .cards .card.left-card {
+body .countdown-info .cards .card.left-card {
   line-height: 1.2;
 }
 
 @media screen and (max-width: 630px) {
-  body .countdown .clock ul li {
-    font-size: 20px;
+  body .countdown-info {
+    padding: 50px 10px;
   }
 }
 

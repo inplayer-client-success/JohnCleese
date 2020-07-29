@@ -145,14 +145,49 @@ body{
     }
   }
 
+ 
 
-  .countdown {
+  .countdown-info {
       padding: 50px 30px;
       background: #fff;
       color: $dark;
       text-align: center;
       
-      .clock {
+      // .clock {
+
+        #countdown-container {
+          width: 100%;
+          max-width: 700px;
+          margin: 0 auto;
+        }
+      
+        #countdown-container .countdown {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+        }
+      
+        #countdown-container .countdown .countdown-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-transform: uppercase;
+          font-size: 16px;
+        }
+      
+        #countdown-container .countdown .countdown-item .countdown-text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          max-width: 40px;
+          height: 40px;
+          font-size: 35px;
+          padding: 20px;
+        }
+
           ul {
               justify-content: center;
               flex-wrap: wrap;
@@ -167,7 +202,7 @@ body{
                 font-size: 30px;
               }
           }
-      }
+      // }
 
       h1, h3,h2 {
           font-size: 28px;
@@ -203,15 +238,9 @@ body{
   }//countdown
 
   @media screen and (max-width:630px) {
-      .countdown {
-        .clock {
-            ul {
-                li {
-                    font-size: 20px;
-                }
-            }
+        .countdown-info {
+          padding: 50px 10px;
         }
-      }
   }
   @media screen and (max-width:430px) {
     #nav-wrapper {
