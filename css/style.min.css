@@ -652,7 +652,7 @@ body #nav-wrapper .nav-container .nav-logo {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  width: 100px;
+  width: 100%;
 }
 
 body #nav-wrapper .nav-container .nav-logo .logo {
